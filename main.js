@@ -15,6 +15,13 @@ function adicionaLinha() {
     const inputNome = document.getElementById('nome');
     const inputNumero = document.getElementById('numero');
 
+
+    if(inputNumero.value.length < 8){
+        alert (`O número ${inputNumero.value} não possui uma quantidade de dígitos necessários de um telefone`);
+    }
+
+    else{
+
     if (contatos.includes(inputNome.value)) {
         alert (`O contato ${inputNome.value} já foi inserido`);
     }
@@ -35,6 +42,7 @@ function adicionaLinha() {
         linhas += linha;
         }
     }
+}
 
     inputNome.value = '';
     inputNumero.value = '';
